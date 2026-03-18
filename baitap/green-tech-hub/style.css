@@ -1,0 +1,315 @@
+/* ==========================================
+   GLOBAL STYLES
+   ========================================== */
+:root {
+    --primary-green: #1e7e34;
+    --light-green: #4caf50;
+    --dark-green: #145a32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="1200" height="600" fill="%231e7e34"/><rect width="1200" height="600" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.hero .btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+    padding: 12px 30px;
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
+.about-section h2 {
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+.about-section ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.about-section img {
+    border: 5px solid var(--light-green);
+}
+
+/* ==========================================
+   SOLUTIONS SECTION
+   ========================================== */
+#solutions {
+    background-color: #f8f9fa;
+}
+
+#solutions h2 {
+    color: var(--primary-green);
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.solution-card {
+    border: none;
+    transition: all 0.3s ease;
+    height: 100%;
+    border-top: 4px solid var(--light-green);
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+    border-top-color: var(--primary-green);
+}
+
+.solution-card h5 {
+    color: var(--primary-green);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.solution-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.solution-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(78, 175, 80, 0.1);
+    font-size: 2.5rem;
+}
+
+.solution-card ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ==========================================
+   CONTACT SECTION
+   ========================================== */
+#contact {
+    scroll-margin-top: 80px;
+}
+
+#contact h2 {
+    color: var(--primary-green);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(30, 126, 52, 0.15);
+    outline: none;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control.is-valid {
+    border-color: var(--light-green);
+}
+
+#contactForm .btn {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#contactForm .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(30, 126, 52, 0.3);
+    color: white;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background-color: #1a1a1a;
+    border-top: 3px solid var(--primary-green);
+}
+
+footer h5 {
+    color: var(--light-green);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(78, 175, 80, 0.2);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    background-color: var(--light-green);
+    transform: translateY(-3px);
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--light-green) !important;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0;
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .solution-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+    }
+
+    #contact,
+    #solutions {
+        scroll-margin-top: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 80px 0;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .solution-card h5 {
+        font-size: 1rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+}
